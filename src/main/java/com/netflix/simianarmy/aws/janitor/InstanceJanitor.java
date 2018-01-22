@@ -53,7 +53,7 @@ public class InstanceJanitor extends AbstractJanitor {
 
     @Override
     protected void cleanup(Resource resource) {
-        LOGGER.info(String.format("Terminating instance %s", resource.getId()));
+        LOGGER.info(String.format("Stopping instance %s", resource.getId()));
         awsClient.terminateInstance(resource.getId());
     }
 
